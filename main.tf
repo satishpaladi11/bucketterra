@@ -4,7 +4,7 @@ module "bucket" {
 
   name       = var.name
   project_id = var.project_id
-  location   = "us-east1"
+  location   = "us-east2"
   iam_members = [{
     role   = "roles/storage.objectViewer"
     member = "user:example-user@example.com"
