@@ -1,0 +1,1 @@
+{"Modules":[{"Key":"","Source":"","Dir":"."},{"Key":"bucket","Source":"terraform-google-modules/cloud-storage/google//modules/simple_bucket","Version":"1.7.2","Dir":".terraform/modules/bucket/modules/simple_bucket"}]}
