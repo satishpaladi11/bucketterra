@@ -1,12 +1,17 @@
-module "bucket" {
-  source  = "terraform-google-modules/cloud-storage/google//modules/simple_bucket"
-  version = "~> 1.3"
+terraform {
+  required_providers {
+    google = {
+      source = "hashicorp/google"
+      version = "4.1.0"
+    }
+  }
+}
+provider "google" {
+  project     = "calcium-post-282611"
+  region      = "us-central1"
+}
+resource "google_storage_bucket" {
+  name          = "terrabucket85558"
+  location      = "US"
 
-  name       = var.name
-  project_id = var.project_id
-  location   = "us-east2"
-  iam_members = [{
-    role   = "roles/storage.objectViewer"
-    member = "user:example-user@example.com"
-  }]
 }
