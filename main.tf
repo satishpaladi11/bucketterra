@@ -1,7 +1,7 @@
-provider "google" {
- project     = "prj-dev"
- credentials = var.gcp-creds
-}
+#provider "google" {
+# project     = "prj-dev"
+# credentials = var.gcp-creds
+#}
 
 resource "google_folder" "folders" {
   for_each = toset(var.names)
