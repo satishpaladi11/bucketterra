@@ -1,3 +1,7 @@
+provider "google" {
+ project     = "prj-dev"
+}
+
 resource "google_folder" "folders" {
   for_each = toset(var.names)
   display_name = each.value
