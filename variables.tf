@@ -16,10 +16,3 @@ variable "org_id" {
   description = "Org id."
   default = "0"
 }
-
-variable "gcp-creds" {
-  type = string
-  sensitive = true
-  description = "Google Cloud service account credentials"
-  default= ""
-}
