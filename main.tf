@@ -2,6 +2,17 @@ provider "google" {
  project     = "prj-dev"
 }
 
+terraform {
+  backend "remote" {
+    hostname      = "app.terraform.io"
+    organization  = "prj-org"
+
+    workspaces {
+      name = "prj-workspace"
+    }
+  }
+}
+
 resource "google_folder" "folders" {
   for_each = toset(var.names)
   display_name = each.value
