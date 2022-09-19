@@ -16,3 +16,7 @@ variable "org_id" {
   description = "Org id."
   default = "0"
 }
+
+variable "gcp-creds" {
+default= ""
+}

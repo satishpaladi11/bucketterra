@@ -1,16 +1,6 @@
 provider "google" {
  project     = "prj-dev"
-}
-
-terraform {
-  backend "remote" {
-    hostname      = "app.terraform.io"
-    organization  = "prj-org"
-
-    workspaces {
-      name = "prj-workspace"
-    }
-  }
+ credentials = var.gcp-creds
 }
 
 resource "google_folder" "folders" {
